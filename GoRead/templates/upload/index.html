@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="cards">
+  
+  {% for posting in posting %}
+    <div class="card">
+      <div class="image-section">
+        <img src="{{ posting.image.url }}" alt="my image">
+      </div>
+      <div class="contect">
+        <h4>{{ posting.judul }}</h4>
+        <p>{{ posting.konten }}</p>
+        <a href="">More</a>
+      </div>
+      <div class="posted-date">
+        <p>{{ posting.date }}</p>
+      </div>
+    </div>
+  {% endfor %}
+    
+</div>
+{% endblock %}
+    

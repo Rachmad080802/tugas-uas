@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container {
+    width: 100%;
+}
+.blog-section {
+    width: 85%;
+    margin: 20px auto;
+}
+.blog-section .title {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+.blog-section .title h2{
+    font-size: 40px;
+    color: #357ca6;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.blog-section .title p{
+    font-size: 18px;
+    color: #7e7e7e;
+    margin-top: 20px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    margin: 25px auto;
+}
+.cards .card {
+    width: 100%;
+    position: relative;
+}
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+.contect {
+    padding: 15px 20px;
+}
+.contect h4{
+    font-size: 24px;
+    color: #222;
+    font-weight: 500;
+}
+.contect p{
+    color: #7e7e7e;
+    font-size: 15px;
+}
+.contect a{
+    text-decoration: none;
+    color: #fff;
+    margin-top: 12px;
+    display: inline-block;
+    background-color: #3a706a;
+    padding: 8px 15px;
+}
+.card .posted-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: rgb(44, 195, 255);
+    padding: 6px 15px;
+}
+
+@media screen and (max-widht:992px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-widht:768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
