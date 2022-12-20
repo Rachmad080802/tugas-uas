@@ -9,3 +9,8 @@ class Upload(models.Model):
     
     def __str__(self):
         return self.judul
+    
+class KontakModel(models.Model):
+    nama = models.CharField(max_length=25)
+    email = models.EmailField(max_length=50)
+    pesan = models.TextField()
