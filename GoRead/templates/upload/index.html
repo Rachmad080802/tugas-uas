@@ -2,24 +2,22 @@
 
 
 {% block content %}
-<div class="cards">
-  
-  {% for posting in posting %}
-    <div class="card">
-      <div class="image-section">
-        <img src="{{ posting.image.url }}" alt="my image">
+<div class="container ">
+  <div class="row gy-3 my-3">
+    {% for posting in posting %}
+      <div class="col-sm-6 col-md-4 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{posting.image.url}}" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title" >{{posting.judul}}</h5>
+                <small>{{posting.date}}</small>
+                <p class="card-text" >{{posting.konten}}</p>
+                <a href="#" class="btn btn-primary" >More</a>
+            </div>
+          </div>
       </div>
-      <div class="contect">
-        <h4>{{ posting.judul }}</h4>
-        <p>{{ posting.konten }}</p>
-        <a href="">More</a>
-      </div>
-      <div class="posted-date">
-        <p>{{ posting.date }}</p>
-      </div>
-    </div>
-  {% endfor %}
-    
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
     
